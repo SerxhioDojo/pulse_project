@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Home</title>
+</head>
+<body>
+<div class="main">
+    <div class="nav">
+        <div class="mobile">
+            <div
+                    class="d-flex flex-column flex-shrink-0 justify-content-center align-items-center px-2 py-2 mobile-nav"
+                    style="width: 5rem; height: 100vh">
+                <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo"
+                         class="logo" style="width: 50px">
+                </a>
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link py-3 " aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/searchUser" class="nav-link py-3 " title=""
+                           data-bs-toggle="tooltip"
+                           data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/inbox" class="nav-link py-3 " title="" data-bs-toggle="tooltip"
+                           data-bs-placement="right" data-bs-original-title="Orders">
+                            <i class="fa-regular fa-envelope" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/notifications" class="nav-link py-3" title=""
+                           data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                            <i class="fa-regular fa-bell" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/add/post" class="nav-link py-3 " title="" data-bs-toggle="tooltip"
+                           data-bs-placement="right" data-bs-original-title="Customers">
+                            <i class="fa-regular fa-square-plus" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile" class="nav-link py-3 " title="" data-bs-toggle="tooltip"
+                           data-bs-placement="right" data-bs-original-title="Customers">
+                            <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a class="btn btn-danger" href="/logout" style="width: 40px; height: 40px; border-radius: 50%">
+                    <i class="fa-solid fa-power-off" style="color: #ffffff;"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="desktop">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white" style="width: 280px; height: 100vh">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo" class="logo" style="width: 120px">
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto desktop">
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link">
+                            <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/searchUser" class="nav-link">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                            Search
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/inbox" class="nav-link">
+                            <i class="fa-regular fa-envelope" style="color: #ffffff;"></i>
+                            Messages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/notifications" class="nav-link">
+                            <i class="fa-regular fa-bell" style="color: #ffffff;"></i>
+                            Notifications
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/add/post" class="nav-link">
+                            <i class="fa-regular fa-square-plus" style="color: #ffffff;"></i>
+                            Create
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile" class="nav-link">
+                            <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+                            User
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <a class="btn btn-danger" href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="my-3 search-section mx-auto d-flex flex-column align-items-center">
+        <form class="container search-section input-group" action="/search"
+              method="post">
+            <div class="search-box d-flex w-100">
+                <input type="text" name="search_query" id="search_text" class="form-control"
+                       placeholder="Search for users" style="border-radius: 0">
+                <div class="input-group-append">
+                    <button class="btn btn-search" type="submit" style="border-radius:
+                     0; border: 2px solid #ff2079" >Search
+                    </button>
+                    <button class="btn btn-search-mob" type="submit" style="border-radius:
+                     0; border: 2px solid #ff2079; width: 40px"><i
+                            class="fa-solid fa-magnifying-glass"
+                                                        style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="results d-flex flex-column mt-5 align-items-start">
+            {% if results %}
+            {% for result in results %}
+            <a href="/user/{{result.id}}"
+               class="text-white fs-3 text-decoration-none text-centre mb-2">{{result.first_name
+                }} {{result.last_name}}</a>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

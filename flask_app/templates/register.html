@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reg_log.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo"
+             class="logo mb-5" style="position:absolute; top: 17%">
+
+        <div class="video">
+            <video autoplay muted loop id="myVideo" style="width: fit-content">
+                <source src="{{ url_for('static', filename='assets/p1_vid.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="form reg">
+            <h1 class="text-center">Register</h1>
+            {% with messages = get_flashed_messages(category_filter=["registrationFailed"]) %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-danger" role="alert" style="background-color: ">
+                {{message}}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <form action="/register" method="post" class="w-50 m-auto p-3">
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="first_name">
+                </div>
+                {% with messages = get_flashed_messages(category_filter=["firstNameRegister"]) %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div class="mb-3">
+                    <label for="last_name" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="last_name">
+                </div>
+                {% with messages = get_flashed_messages(category_filter=["lastNameRegister"]) %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                {% with messages = get_flashed_messages(category_filter=["emailRegister"]) %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                {% with messages = get_flashed_messages(category_filter=["passwordRegister"]) %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" name="confirmPassword">
+                </div>
+
+                {% with messages = get_flashed_messages(category_filter=["confirmPasswordRegister"]) %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-danger" role="alert">
+                    {{message}}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+                <button type="submit" class="btn btn-primary d-flex justify-content-center">Register
+                </button>
+            </form>
+
+            <a class="d-flex justify-content-center redir" href="/loginPage">Already have an
+                account?
+                Log in</a>
+        </div>
+    </div>
+</body>
+
+</html>

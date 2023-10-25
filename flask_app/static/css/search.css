@@ -1,0 +1,85 @@
+body {
+    background: radial-gradient(circle, rgba(4,0,94,1) 35%, rgba(0,0,0,1) 100%);
+    height: fit-content;
+}
+
+form {
+    background-color: transparent !important;
+    color: #ff2079;
+}
+
+form .btn {
+    background-color: #ff2079;
+    color: white;
+}
+
+form .btn:hover {
+    background-color: #ff2079;
+    color: white;
+}
+
+.main {
+    display: flex;
+    align-items: start;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+}
+
+.nav > .mobile > li {
+    width: 30px !important;
+}
+
+.desktop {
+    position: sticky !important;
+    height: 100dvh;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 22px !important;
+    margin-bottom: 23px;
+}
+
+i {
+    margin-right: 15px;
+}
+
+hr {
+    border: 1px #ff2079 solid !important;
+}
+
+.search-section {
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .mobile {
+        position: sticky;
+        top: 0;
+        width: 50px !important;
+    }
+    .desktop {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .desktop {
+        position: sticky !important;
+        height: 100dvh !important;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+}

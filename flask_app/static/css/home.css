@@ -1,0 +1,223 @@
+body {
+    background: radial-gradient(circle, rgba(4,0,94,1) 35%, rgba(0,0,0,1) 100%);
+    height: fit-content;
+}
+
+form {
+    background-color: transparent !important;
+    color: #ff2079;
+}
+
+form .btn {
+    background-color: #ff2079;
+    color: white;
+}
+
+form .btn:hover {
+    background-color: #ff2079;
+    color: white;
+}
+
+.main {
+    display: flex;
+    align-items: start;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+}
+
+.nav > .mobile > li {
+    width: 30px !important;
+}
+
+.desktop {
+    position: sticky !important;
+    height: 100dvh;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 22px !important;
+    margin-bottom: 23px;
+}
+
+i {
+    margin-right: 15px;
+}
+
+hr {
+    border: 1px #ff2079 solid !important;
+}
+
+.feed {
+
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+}
+
+.post {
+    padding: 20px;
+    backdrop-filter: blur(17px) saturate(200%);
+    -webkit-backdrop-filter: blur(17px) saturate(200%);
+    background-color: rgba(99, 105, 112, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.card {
+    --bs-card-bg: transparent;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile {
+        position: sticky;
+        top: 0;
+        width: 50px !important;
+    }
+    .desktop {
+        display: none;
+    }
+
+    .post > .header {
+        font-size: 20px;
+    }
+
+    .contentOI {
+        font-size: 17px;
+    }
+
+    .post > img {
+        width: 200px !important;
+    }
+
+    .feed {
+        flex: 1;
+        width: 85% !important;
+    }
+
+    .nav-link {
+        padding: 0 !important;
+    }
+
+    .actions > a {
+        font-size: 20px;
+    }
+
+    .footer > a {
+        font-size: 20px !important;
+    }
+
+    .comments-section {
+        width: 200px !important;
+        font-size: 14px;
+    }
+
+    .delete-desk {
+        display: none !important;
+    }
+
+    .stats > h3 {
+        font-size: 14px;
+    }
+
+    .stats > a > h3 {
+        font-size: 14px !important;
+    }
+
+    .table-followers {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-collapse: collapse !important;
+    }
+
+    .btn-search {
+        display: none !important;
+    }
+
+
+    .profile-img {
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 10px !important;
+    }
+
+    .statistics {
+        width: 75% !important;
+        align-items: center;
+    }
+
+    .sections {
+        width: 50%;
+    }
+
+    .sections > a {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .desktop {
+        position: sticky !important;
+        height: 100dvh !important;
+    }
+
+    .delete-mob {
+        display: none !important;
+    }
+
+    .feed {
+        border-left: 1px #ff2079 solid !important;
+    }
+
+    .btn-search-mob {
+        display: none !important;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .post > img {
+        width: 600px !important;
+    }
+
+    form {
+        width: 55%;
+        font-size: 22px;
+    }
+
+    .post > .header {
+        font-size: 24px;
+    }
+
+    .contentOI {
+        font-size: 20px;
+    }
+
+    .actions > a {
+        font-size: 25px;
+    }
+
+    .footer > a {
+        font-size: 25px !important;
+    }
+
+    .comments-section {
+        width: 600px !important;
+    }
+
+    .sections {
+        width: 30%;
+    }
+}
